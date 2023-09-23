@@ -7,7 +7,7 @@ class Listener {
 }
 
 class Component {
-    constructor(selector = null,listener = null,values = null,styles = null,id = null){
+    constructor(selector = null,listener = null,values = {},styles = null,id = null){
         this.htmlElement = document.querySelector(selector);
         this.selector = selector;
         this.values = values;
@@ -46,18 +46,17 @@ class Component {
             let [attribute, value] = this.styles[index];
             this.htmlElement.style[attribute] = value;
         }
-
-        //TODO :
-        /*
-        Add multiple styles to single key (e.g. "visible":[ ["display":"none"], ["backgroundColor","black"] ])
-        */
     }
 }
 
 class ComponentManager extends Component{
-    constructor (selector = null,listener = null,values = null,styles = null,id = null, components = {}) {
+    constructor (selector = null,listener = null,values = {},styles = null,id = null, components = {}) {
         super(selector,listener,values,styles,id);
         this.components = components;
+    }
+
+    init(func = (ctx)=>{return args}) {
+        return func(this);
     }
 
     add(component){

@@ -1,7 +1,7 @@
 const clicker = new Component(
     "#clicker",
     clickerOnClick,
-    {"points":0, "power":1},
+    {"points":0, "power":1, "pps":12},
     null,
     "clicker"
 );
