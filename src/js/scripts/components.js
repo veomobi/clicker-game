@@ -1,7 +1,7 @@
 const clicker = new Component(
     "#clicker",
     clickerOnClick,
-    {"points":0, "power":1, "pps":12},
+    {"points":0, "power":1, "pps":1},
     null,
     "clicker"
 );
@@ -12,6 +12,14 @@ const counter = new Component(
     null,
     null,
     "counter"
+);
+
+const ppsCounter = new Component(
+    "#pps",
+    null,
+    null,
+    null,
+    "pps"
 );
 
 const overlay = new Component(
