@@ -46,6 +46,11 @@ class Component {
             let [attribute, value] = this.styles[index];
             this.htmlElement.style[attribute] = value;
         }
+
+        //TODO :
+        /*
+        Add multiple styles to single key (e.g. "visible":[ ["display":"none"], ["backgroundColor","black"] ])
+        */
     }
 }
 

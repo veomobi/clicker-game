@@ -13,3 +13,11 @@ const counter = new Component(
     null,
     "counter"
 );
+
+const overlay = new Component(
+    "#info-overlay",
+    null,
+    null,
+    {"hidden":["display","none"],"visible":["display","flex"]},
+    "overlay"
+);
